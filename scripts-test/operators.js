@@ -22,23 +22,35 @@ console.log("increment:" + increment)
 
 var aux = 5
 aux += 6 //the same a + 6
-console.log(aux)
+console.log("add operator:" + aux)
 
 var reduce = 5
 reduce = reduce - 1
 reduce--
-console.log(reduce)
+console.log("reduce operator" + reduce)
 
 var aux2 = 10
 aux2 -= 4
-console.log(aux2)
+console.log("reduce operator2:" + aux2)
 
 var aux3 = 4
 aux3 *= 5 
-console.log(aux3)
+console.log("prod operator:" + aux3)
 
 var aux4 = 20
 aux4 /= 5 
-console.log(aux4)
+console.log("div operator:" + aux4)
 
-var 
+var a = 4
+var b = 3
+var add = a + b++
+console.log("sum with increment after:" + add)
+var add2 = a + ++b
+console.log("sum with increment before:" + add2)
+
+var c = 5
+var d = 6
+var sub = c + d--
+console.log("sum with reduction after:" + sub)
+var sub2 = c + --d
+console.log("sum with reduction before:" + sub2)

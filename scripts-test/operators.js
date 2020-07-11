@@ -1,3 +1,6 @@
+//Script to learn how work with operators using js
+//Created in 2020-07-10 by Aline Guerreiro
+
 var sum = 4 + 2
 var diff = 5 - 3
 var prod = 5 * 4

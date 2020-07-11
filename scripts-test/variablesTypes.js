@@ -1,3 +1,6 @@
+//Example of script with all types of variables in js
+//Created in 2020-07-10 by Aline Guerreiro
+
 var integer = 10;
 var decimal = 10.54;
 var stringWithTwoQuotes = "Test text";

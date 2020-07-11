@@ -1,4 +1,4 @@
-//Script to learn how work with functions/JSONs using js
+//Script to learn how work with functions using js
 //Created in 2020-07-10 by Aline Guerreiro
 
 //it computes multiplication of two numbers

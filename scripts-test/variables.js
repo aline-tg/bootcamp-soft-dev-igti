@@ -1,3 +1,6 @@
+//Script to study how variables work in javascript
+//Created in 2020-07-10 by Aline Guerreiro
+
 //declaring variables
 var abacate = 2;
 var banana = 3;

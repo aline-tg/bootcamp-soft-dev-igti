@@ -1,15 +1,6 @@
 //Script to train logic thinking with js
 //Created in 2020-07-12 by Aline Guerreiro
 
-//listar todos os números primos menores 
-//ou iguais a determinado numero
-
-//número primo só é divísivel por 2 números
-//1 e ele mesmo
-
-//X é divisível por Y: resto da divisão de x por y é igual 
-//a zero
-
 //function to get all numbers in a specific interval
 //start: first number of interval (integer)
 //end: last number for interval (integer)
@@ -52,11 +43,9 @@ function ruleSevenDivisibility(arrayInt){
     return sumProd
 }
 
-//function to get only not multiple number of a specific number
-//array: array with integer numbers
-//number: number to calculate not multiples (integer) 
-function onlyNotMultipleNumbers(array){
-    var onlyNotMultiple = array.map(function(item) {
+//function to compute not multiples of the numbers 2,3,4,5,6,7
+//number: integer to compute your not multiplicity :) 
+function checkNotMultiples(number){
         //starting some vars
         var evenNumbers = []
         var threeMultiples =[]
@@ -66,7 +55,7 @@ function onlyNotMultipleNumbers(array){
         var notMultiples = []
 
         //to format the item in string 
-        var itemToString = String(item)
+        var itemToString = String(number)
         //to format each element of the item in an Array element
         var itemToArray = Array.from(itemToString)
         //to format each element of the Array of String in an Array of int
@@ -80,20 +69,29 @@ function onlyNotMultipleNumbers(array){
         //to create a reverse array to use in seven divisibility rule
         var reverseIntArray = convertingElementsToInt.reverse()
         var prodSevenArray = ruleSevenDivisibility(reverseIntArray)
-
+        
+        if(number === 2 || number === 3 || number === 5 || number === 7) {notMultiples.push(number)}
         //to check even numbers - two multiples
-        if(item % 2 === 0) {evenNumbers.push(item)}
+        else if(number % 2 === 0) {evenNumbers.push(number)}
         //to check three multiples
-        else if(sumOfEachElementOfItem % 3 === 0) {threeMultiples.push(item)}
+        else if(sumOfEachElementOfItem % 3 === 0) {threeMultiples.push(number)}
         //to check four multiples
-        else if(item % 4 === 0 || (getLastElement % 4 === 0 && getPenultElement % 4 === 0)) {fourMultiples.push(item)}
+        else if(number % 4 === 0 || (getLastElement % 4 === 0 && getPenultElement % 4 === 0)) {fourMultiples.push(number)}
         //to check five multiples
-        else if(getLastElement === 0 || getLastElement === 5) {fiveMultiples.push(item)}
+        else if(getLastElement === 0 || getLastElement === 5) {fiveMultiples.push(number)}
         //to check seven multiples
-        else if (prodSevenArray % 7 === 0) {sevenMultiples.push(item)}  
+        else if (prodSevenArray % 7 === 0) {sevenMultiples.push(number)}  
         //to create an array with only numbers without multiple :) 
-        else {notMultiples.push(item)}
+        else {notMultiples.push(number)}
       
+        return notMultiples
+}
+
+//function to get only not multiple number of a specific number
+//array: array with integer numbers
+function onlyNotMultipleNumbers(array){
+    var onlyNotMultiple = array.map(function(item) {
+        var notMultiples = checkNotMultiples(item)
         return notMultiples
     })
                                                                
@@ -101,18 +99,27 @@ function onlyNotMultipleNumbers(array){
                           .sort(function(a, b){return a-b})
 }
                                                                 
-//computes Erastotenes Crive, more info in:https://pt.wikipedia.org/wiki/Crivo_de_Erat%C3%B3stenes
+//function to compute Erastotenes Crive, more info in: https://pt.wikipedia.org/wiki/Crivo_de_Erat%C3%B3stenes
 //element: integer number
 //maxNumberList: maximum number to compute primes
-function erastotenesCrive(element,maxNumberList){
-    var firstElement = element
+function computeErastotenesCrive(element,maxNumberList){
+
     var allIntervalMediumNumbers = allIntervalNumbers(element,maxNumberList)
     var onlyNotMultiplesMedium = onlyNotMultipleNumbers(allIntervalMediumNumbers)
-    var allNumbers = onlyNotMultiplesMedium.concat(firstElement).sort(function(a, b){return a-b})
+    var allNumbers = onlyNotMultiplesMedium.sort(function(a, b){return a-b})
+                                           .toString()
     return allNumbers
 }
 
-function getPrimesNumbers(number){
+//function to compute unique values in an array
+function uniqueValues(value, index, self){
+    return self.indexOf(value) === index
+}
+
+//function to compute prime numbers
+function computePrimesNumbers(number){
+    //start variables
+    var primeNumbersAux = []
     //start from 2, the reason is because prime numbers
     //aren't start from number 1
     var allNumbers = allIntervalNumbers(2,number)
@@ -123,23 +130,44 @@ function getPrimesNumbers(number){
     //index in array of max number to iterate
     var indexLimit = allNumbers.indexOf(upperLimit)
     //array with only elements to iterate and get prime numbers
-    var iterate = allNumbers.slice(0,indexLimit)
-    //console.log(allNumbers)
-    console.log(indexLimit)
-    console.log(upperLimit)
-    console.log(iterate)
+    var iterate = allNumbers.slice(0,indexLimit+1)
 
-    var teste = iterate.forEach(item => {erastotenesCrive(item, maxNumber)})
-    teste.concat(teste)
-    console.log(teste)
-    /*for(j=0; j <= iterate.length-1; j++){
-        var finalPrimesNumbers = erastotenesCrive(iterate[i], maxNumber)
-        finalPrimesNumbers+=
-    }*/
+    var primeNumbersIntermediate = iterate.map(function(item) {
+        primeNumbersAux = computeErastotenesCrive(item, maxNumber)
+        return primeNumbersAux
+    })
+
+    var allPrimeNumbers = primeNumbersIntermediate.join()
+                                                  .split(",")
+                                                  .sort(function(a, b){return a-b})
+                                                  .filter(uniqueValues)
+                                                  .toString()
+   return allPrimeNumbers
 }
 
-//getPrimesNumbers(30)
+//auxiliar function with "user interface"
+var readline = require("readline")
+var r1 = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
 
-//console.log(erastotenesCrive(2,30))
-//console.log(allIntervalNumbers(2,30))
-//console.log(notMultipleNumbers([2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],2))
+function question(){
+    r1.question("Choose a positive integer number: ", function(number){
+        if(number < 0){
+            console.log("You need to input a positive number")
+            question()
+        } else if(number == 0){
+            console.log("Your interval needs to be upper than that")
+            question()
+        } else if(number == 1){
+            console.log("There aren't primes numbers in this interval")
+            question()
+        } else if(number > 1){
+            console.log("The primes numbers are: " + computePrimesNumbers(number))
+            r1.close()
+        }
+    })
+}
+
+question()

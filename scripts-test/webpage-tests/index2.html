@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 2</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <p id="paragraph1">This is a paragraph</p>
+        <input type="text" id="input-color">
+
+        <button type="button" 
+            onclick="document.getElementById('paragraph1').style.visibility='hidden'">
+            Hide Paragraph 
+        </button>
+
+        <button type="button" 
+            onclick="document.getElementById('paragraph1').style.visibility='visible'">
+            Show Paragraph 
+        </button>
+
+        <button type="button"
+            onclick= "document.getElementById('paragraph1').style.color = 'blue'">
+            Change Color to Blue
+        </button>
+
+        <button type="button"
+            onclick= "changeColor()">
+            Change Color
+        </button>
+
+        <script>
+            var p= document.getElementById('paragraph1')
+            p.style.color = "red"
+            p.style.fontWeight = "bold"
+            p.style.fontSize = "30px"
+
+            function changeColor(){
+                var color = document.getElementById('input-color').value
+                document.getElementById('paragraph1')
+                        .style.color = color
+            }
+        </script>
+
+    </body>
+</html>

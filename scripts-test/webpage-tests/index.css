@@ -1,0 +1,25 @@
+/*Script example to learn how to create a web page
+ that uses js+css+html
+Created in 2020-07-14 by Aline Guerreiro*/
+
+.text-header{
+    color: blue; 
+    background-color: aquamarine
+}
+
+.text2{
+    color:red
+}
+
+.border{
+    border:solid 12px #00b9b4;
+    border-radius: 27px;
+}
+
+.paragraph{
+    /*margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 15px;*/
+    margin: 30px 15px 20px 10px
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>IMC Computation</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="imc.css">
+        <script src="imc.js"></script>
+    </head>
+
+    <body class= "bodyClass">
+        <h1>IMC Computation</h1>
+        <h2>Let me know what is your weight and height on fields below:</h2>
+       
+        <div class= "divInputs">
+            <label class= "label" for="height">Height:</label>
+            <input class= "inputs" id="height" type="number" step="0.01">
+        </div>
+
+        <div class= "divInputs">
+            <label class= "label" for="weight">Weight:</label>
+            <input class= "inputs" id="weight" type="number" step="0.01">
+        </div>
+        <br>
+        <button class="btn-compute" onclick="computeIMC()">Compute IMC</button>
+        <button class="btn-compute" onclick="cleanResults()">Clean Results</button>
+        <p id="validResult" class="interpretResult"></p>
+        <p id="result" class="result"></p>
+        <p id="interpretResult" class="interpretResult"></p>
+    </body>
+</html>

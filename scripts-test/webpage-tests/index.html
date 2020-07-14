@@ -3,19 +3,34 @@
     <head>
         <title>Page Title</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script>
+            //how to add javascript in html page
+            //alert("Hello World")
+            console.log("Hello World")
+
+            setTimeout(function(){
+                console.log("1 second ago")
+            }, 1000)
+
+            setTimeout(function(){
+                console.log("2 second ago")
+                //document.write("Any text")
+            }, 2000)
+        </script>
     </head>
     <body>
         <img width= "200" src="https://www.omelete.com.br/imagens/musica/news/diversos/gorillaz.jpg">
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
+        <h1 class= "text-header">Heading 1</h1>
+        <h2 class= "text2">Heading 2</h2>
         <h3>Heading 3</h3>
         <h4>Heading 4</h4>
         <h5>Heading 5</h5>
         <h6>Heading 6</h6>
 
-        <p>This is the first paragraph</p>
+        <p class="border paragraph">This is the first paragraph</p>
         <br></br>
-        <p>This is the second paragraph</p>
+        <p class="paragraph" id="secondParagraph">This is the second paragraph</p>
 
         <a href="https://whiplash.net/">Whiplash website</a>
 
@@ -54,6 +69,21 @@
         <br>
         <textarea row="5" cols="20"> Start Text</textarea>    
         <br>
-        <button type="button" onclick="alert('Hello World')">Click here</button>
+        <button type="button" onclick=buttonClick()>Click here</button>
+        <button type="button" onclick=buttonClick2()>Click here 2</button>
+        <br>
+        <br>
+        <img id="lamp" src="lampoff.jpg">
+        <button type="button" onclick=turnOnLamp()>Turn on lamp</button>
+        <button type="button" onclick=turnOffLamp()>Turn off lamp</button> 
+        <br>
+        <button type="button" onclick="addElements()">Add Elements</button>
+        <button type="button" onclick="removeElements()">Remove Elements</button>
+        
+        <div id="div-elements">
+
+        </div>
+       
+        <script src=index.js></script>
     </body>
 </html>

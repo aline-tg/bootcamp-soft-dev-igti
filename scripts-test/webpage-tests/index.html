@@ -30,7 +30,7 @@
 
         <p class="border paragraph">This is the first paragraph</p>
         <br></br>
-        <p>This is the second paragraph</p>
+        <p class="paragraph" id="secondParagraph">This is the second paragraph</p>
 
         <a href="https://whiplash.net/">Whiplash website</a>
 
@@ -69,10 +69,21 @@
         <br>
         <textarea row="5" cols="20"> Start Text</textarea>    
         <br>
-        <button type="button" onclick="alert('Hello World')">Click here</button>
-        <script>
-            console.log("Hello world in body")
-        </script>
-        <script src="index.js"></script>
+        <button type="button" onclick=buttonClick()>Click here</button>
+        <button type="button" onclick=buttonClick2()>Click here 2</button>
+        <br>
+        <br>
+        <img id="lamp" src="lampoff.jpg">
+        <button type="button" onclick=turnOnLamp()>Turn on lamp</button>
+        <button type="button" onclick=turnOffLamp()>Turn off lamp</button> 
+        <br>
+        <button type="button" onclick="addElements()">Add Elements</button>
+        <button type="button" onclick="removeElements()">Remove Elements</button>
+        
+        <div id="div-elements">
+
+        </div>
+       
+        <script src=index.js></script>
     </body>
 </html>

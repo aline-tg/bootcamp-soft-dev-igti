@@ -1,0 +1,43 @@
+/*Script example to learn how to create a web page
+that uses js+css+html
+This page will calculate the IMC of the user
+Created in 2020-07-14 by Aline Guerreiro*/
+
+.bodyClass{
+    text-align: center;
+    background-color: rosybrown;
+}
+
+.divInputs{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.inputs{
+    font-size: 20px;
+    border: solid 1px pink;
+}
+
+.btn-compute{
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    width: 20%;
+    border: solid 1px pink;
+    background: darksalmon;
+}
+
+.result{
+    font-size: 40px;
+    font-style: italic;
+}
+
+.interpretResult {
+    font-size: 40px;
+    font-weight: bolder;
+}

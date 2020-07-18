@@ -52,7 +52,7 @@ function checkNotMultiples(number){
         var fourMultiples = []
         var fiveMultiples = []
         var sevenMultiples = []
-        var notMultiples = []
+        var notMultiples = [2,3,5,7]
 
         //to format the item in string 
         var itemToString = String(number)
@@ -70,9 +70,8 @@ function checkNotMultiples(number){
         var reverseIntArray = convertingElementsToInt.reverse()
         var prodSevenArray = ruleSevenDivisibility(reverseIntArray)
         
-        if(number === 2 || number === 3 || number === 5 || number === 7) {notMultiples.push(number)}
         //to check even numbers - two multiples
-        else if(number % 2 === 0) {evenNumbers.push(number)}
+        if(number % 2 === 0) {evenNumbers.push(number)}
         //to check three multiples
         else if(sumOfEachElementOfItem % 3 === 0) {threeMultiples.push(number)}
         //to check four multiples

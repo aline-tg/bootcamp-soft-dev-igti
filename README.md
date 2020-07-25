@@ -16,11 +16,11 @@ This Bootcamp has 4 modules:
 ## Getting Started
 
 Folders organization:
-*interactive-class: usually codes created with support from teacher in presential classes
-*practical-example: practical examples made during the video classes
-*project-euler: solving practical problems from [Project-Euler] (https://projecteuler.net/)
-*prot-calculator-project: simple calculator prototype developed in two ways -> with if conditionals and switch method
-*scripts-test: usually codes developed during video classes, can be little messy, basically is constructed to better understanding of how language works
+* interactive-class: usually codes created with support from teacher in presential classes
+* practical-example: practical examples made during the video classes
+* project-euler: solving practical problems from [Project-Euler](https://projecteuler.net/)
+* prot-calculator-project: simple calculator prototype developed in two ways -> with if conditionals and switch method
+* scripts-test: usually codes developed during video classes, can be little messy, basically is constructed to better understanding of how language works
 
 
-**[Know more about this Bootcamp]** (https://www.igti.com.br/custom/programador-de-software-iniciante/) 
+** [Know more about this Bootcamp](https://www.igti.com.br/custom/programador-de-software-iniciante/) ** 

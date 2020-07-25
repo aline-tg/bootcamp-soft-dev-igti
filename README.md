@@ -15,7 +15,8 @@ This Bootcamp has 4 modules:
 
 ## Getting Started
 
-Folders organization:
+Folders organization for module1:
+Root: *mod1*
 * interactive-class: usually codes created with support from teacher in presential classes
 * practical-example: practical examples made during the video classes
 * project-euler: solving practical problems from [Project-Euler](https://projecteuler.net/)

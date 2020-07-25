@@ -14,6 +14,7 @@
 //obtain a score of 938 × 53 = 49714.
 //What is the total of all the name scores in the file?
 //Answer: 871198282
+//Created in 2020-07-20 by Aline Guerreiro
 
 var fs=require("fs")
 fs.readFile("p022_names.txt","utf-8",function(err,data){

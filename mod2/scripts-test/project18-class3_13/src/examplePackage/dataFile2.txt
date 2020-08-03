@@ -1,0 +1,4 @@
+1;Paulo Ramos;Rua a, 32; BH; Casado
+2;José Silva;Rua b, 64;SP; Solteiro
+3;Maria Joana da Silva;Rua C, 96;RJ; Viuva
+4;Carla Costa Moura;Rua D, 128;ES; Solteiro

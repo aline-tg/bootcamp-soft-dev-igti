@@ -23,5 +23,20 @@ Root: *mod1*
 * prot-calculator-project: simple calculator prototype developed in two ways -> with if conditionals and switch method
 * scripts-test: usually codes developed during video classes, can be little messy, basically is constructed to better understanding of how language works
 
+Folders organization for module2:
+Root: *mod2*
+* interactive-class
+* practical-example
+* scripts-test
+
+Folders organization for module2:
+Root: *mod3*
+* practical-example
+* scripts-test
+
+Folders organization for module2:
+Root: *mod4*
+* final-challenge: scripts related with final challenge from module 4
+* practical-examples
 
 ** [Know more about this Bootcamp](https://www.igti.com.br/custom/programador-de-software-iniciante/) ** 

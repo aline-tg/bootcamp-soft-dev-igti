@@ -1,13 +1,6 @@
 //Script of final challenge of software developer bootcamp
 //Created in 2020-09-07 by Aline Guerreiro
 
-//duas opções de entrada cadastrar funcionário
-//pedir nome do funcionario e salario bruto
-//funcionario deve ser armazenado em uma lista
-//pode ser em memoria ou arquivo
-//imprimir contra cheque
-//qual funcionario deve ter o contracheque impresso
-
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.lang.Integer;

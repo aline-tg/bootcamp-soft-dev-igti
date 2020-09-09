@@ -29,12 +29,12 @@ Root: *mod2*
 * practical-example
 * scripts-test
 
-Folders organization for module2:
+Folders organization for module3:
 Root: *mod3*
 * practical-example
 * scripts-test
 
-Folders organization for module2:
+Folders organization for module4:
 Root: *mod4*
 * final-challenge: scripts related with final challenge from module 4
 * practical-examples
